@@ -1,0 +1,13 @@
+name: getting-started-basic-weather-app
+region: us-east-1
+cloudProvider: genezio
+frontend:
+    path: client/dist
+    subdomain: lightpink-rooseveltian-alpaca
+scripts:
+    preBackendDeploy: npm install
+    preFrontendDeploy: npm install @genezio-sdk/getting-started-basic-weather-app_us-east-1 && npm install && npm run build
+workspace:
+    backend: server
+    frontend: client
+language: ts
